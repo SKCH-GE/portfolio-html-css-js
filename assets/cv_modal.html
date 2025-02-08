@@ -1,0 +1,79 @@
+<!-- cv-modal.html -->
+<div id="cv-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">✖</span>
+        <iframe id="cv-frame" src="assets/My_Resume.pdf"></iframe>
+    </div>
+</div>
+
+<style>
+    
+/* Modal Background */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: var(--color-white);
+    border-radius: 0;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: none;
+    max-height: none;
+    box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--text-color-second);
+    padding: 10px;
+    background: var(--color-white);
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
+    transition: 0.4s;
+}
+.close-btn:hover {
+    color: var(--first-color);
+    transform: rotate(90deg);
+}
+
+/* Full-Screen iFrame */
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    
+}
+@media only screen and (max-width: 900px) {
+    .close-btn {
+        top: 10px;
+        right: 10px;
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+}
+</style>
